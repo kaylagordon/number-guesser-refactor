@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Number Guesser</title>
+  </head>
+  <body>
+    <header>
+      <h1><span class="bold-text">NUMBER</span>GUESSER</h1>
+      <p>ULTIMATE CHALLENGER EDITION</p>
+    </header>
+    <main>
+      <section class="set-range">
+        <h2>Set Range</h2>
+        <section>
+          <p>Min Range</p>
+          <input type="text">
+        </section>
+        <section>
+          <p>Max Range</p>
+          <input type="text">
+        </section>
+        <button id="update-button">Update</button>
+      </section>
+      <section class="player-box">
+        <p>The Current Range is <span id="min-range">1</span> to <span id="max-range">100</span>.</p>
+        <h2>Challenger 1</h2>
+        <section>
+          <p>Name</p>
+          <input type="text">
+        </section>
+        <section>
+          <p>Guess</p>
+          <input type="text">
+          <h2>Challenger 2</h2>
+          <section>
+            <p>Name</p>
+            <input type="text">
+          </section>
+          <section>
+            <p>Guess</p>
+            <input type="text">
+            <button id="sumbit-guess-button">SUBMIT GUESS</button>
+            <button id="reset-game-button">RESET GAME</button>
+            <button id="clear-game-button">CLEAR GAME</button>
+        </section>
+      </section>
+      <section class="latest-score">
+        <h2>Latest Score</h2>
+        <section class="player-one-guess">
+          <p>Challenger 1 Name</p>
+          <p>current guess</p>
+          <p>97</p>
+          <p>that's too high</p>
+        </section>
+        <section class="player-two-guess">
+          <p>Challenger 2 Name</p>
+          <p>current guess</p>
+          <p>3</p>
+          <p>that's too low</p>
+        </section>
+      </section>
+    </main>
+    <aside>
+      <section class="cards">
+        <p><span>CHALLENGER 1 NAME</span> VS <span>CHALLENGER 2 NAME</span></p>
+        <p>CHALLENGER 2 NAME</p>
+        <p>WINNER</p>
+        <p><span>47</span> GUESSES</p>
+        <button>X</button>
+      </section>
+    </aside>
+  </body>
+</html>
