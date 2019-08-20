@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="styles.css" type="text/css" rel="stylesheet">
     <title>Number Guesser</title>
   </head>
   <body>
     <header>
-      <h1><span class="bold-text">NUMBER</span>GUESSER</h1>
-      <p>ULTIMATE CHALLENGER EDITION</p>
+      <h1><span class="number-title">NUMBER</span>GUESSER</h1>
+      <p class="sub-header">ULTIMATE CHALLENGER EDITION</p>
     </header>
     <main>
+      <article class="left-side">
       <section class="set-range">
         <h2>Set Range</h2>
         <section>
@@ -38,7 +40,7 @@
           </section>
           <section>
             <p>Guess</p>
-            <input type="text">
+            <input type="text"><br>
             <button id="sumbit-guess-button">SUBMIT GUESS</button>
             <button id="reset-game-button">RESET GAME</button>
             <button id="clear-game-button">CLEAR GAME</button>
@@ -46,28 +48,29 @@
       </section>
       <section class="latest-score">
         <h2>Latest Score</h2>
-        <section class="player-one-guess">
-          <p>Challenger 1 Name</p>
+        <section class="challenger1-guess">
+          <p class="challenger1-name">Challenger 1 Name</p>
           <p>current guess</p>
           <p>97</p>
           <p>that's too high</p>
         </section>
-        <section class="player-two-guess">
-          <p>Challenger 2 Name</p>
+        <section class="challenger2-guess">
+          <p class="challenger2-name">Challenger 2 Name</p>
           <p>current guess</p>
           <p>3</p>
           <p>that's too low</p>
         </section>
       </section>
-    </main>
-    <aside>
+    </article>
+    <article class="right-side">
       <section class="cards">
-        <p><span>CHALLENGER 1 NAME</span> VS <span>CHALLENGER 2 NAME</span></p>
-        <p>CHALLENGER 2 NAME</p>
+        <p><span class="challenger1-name">CHALLENGER 1 NAME</span> VS <span>CHALLENGER 2 NAME</span></p>
+        <p class="challenger2-name">CHALLENGER 2 NAME</p>
         <p>WINNER</p>
         <p><span>47</span> GUESSES</p>
         <button>X</button>
       </section>
-    </aside>
+    </article>
+    </main>
   </body>
 </html>
