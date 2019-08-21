@@ -1,5 +1,12 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Don't edit */
@@ -23,5 +30,44 @@ article {
 }
 
 header {
-
+  text-align: center;
+  background-color: #404041;
+  padding: 0 0 15px 0;
+  margin: 0;
 }
+
+h1 {
+  color: #DD1972;
+  margin: 0;
+}
+
+.number-title {
+  font-weight: 700;
+  font-size: 200%;
+}
+
+.guesser-title {
+  font-weight: 300;
+  font-size: 200%;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.sub-header-text {
+  color: #FFFFFF;
+  font-size: 21px;
+  margin: 0 10px;
+}
+
+.sub-header-line {
+  border: solid #FFFFFF;
+  border-width: 2px 0 0 0;
+  width: 100px;
+  height: 8px;
+}
+
+/* Needs MQ for header at 475 */
