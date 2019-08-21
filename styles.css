@@ -48,12 +48,15 @@ h2 {
 
 .set-range-paragraph {
   margin: auto;
+  width: 180px;
+  height: 35px;
 }
 
 #update-button {
   width: 100px;
   height: 35px;
   border-radius: 20px;
+
   margin-top: auto;
   background-color: #6e6e6e;
   color: #ffffff;
@@ -109,6 +112,9 @@ h2 {
   border-radius: 20px;
   margin-top: auto;
   background-color: #d0d2d3;
+  color: #ffffff;
+  margin: auto;
+  background-color: #6e6e6e;
   color: #ffffff;
 }
 
