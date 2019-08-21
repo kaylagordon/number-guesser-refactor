@@ -3,6 +3,7 @@
   <head>
     <link href="styles.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <title>Number Guesser</title>
   </head>
   <body>
@@ -68,12 +69,56 @@
       </section>
     </article>
     <article class="right-side">
-      <section class="cards">
-        <p><span class="challenger1-name">CHALLENGER 1 NAME</span> VS <span>CHALLENGER 2 NAME</span></p>
-        <p class="challenger2-name">CHALLENGER 2 NAME</p>
-        <p>WINNER</p>
-        <p><span>47</span> GUESSES</p>
-        <button>X</button>
+      <section class="cards top-card">
+        <div class="card-header">
+          <p class="challenger1-name">CHALLENGER 1 NAME</p>
+          <p> VS </p>
+          <p class="challenger2-name">CHALLENGER 2 NAME</p>
+        </div>
+        <div class="card-main">
+          <div class="card-line"></div>
+          <p class=winner-name>CHALLENGER 2 NAME</p>
+          <p class="card-winner-label">WINNER</p>
+          <div class="card-line"></div>
+        </div>
+        <div class="card-footer">
+          <p><span id="number-of-guesses">47</span> GUESSES</p>
+          <button class="close-button">X</button>
+        </div>
+      </section>
+      <section class="cards center-card">
+        <div class="card-header">
+          <p class="challenger1-name">CHALLENGER 1 NAME</p>
+          <p> VS </p>
+          <p class="challenger2-name">CHALLENGER 2 NAME</p>
+        </div>
+        <div class="card-main">
+          <div class="card-line"></div>
+          <p class=winner-name>CHALLENGER 1 NAME</p>
+          <p class="card-winner-label">WINNER</p>
+          <div class="card-line"></div>
+        </div>
+        <div class="card-footer">
+          <p><span id="number-of-guesses">23</span> GUESSES</p>
+          <button class="close-button">X</button>
+        </div>
+      </section>
+      <section class="cards bottom-card">
+        <div class="card-header">
+          <p class="challenger1-name">CHALLENGER 1 NAME</p>
+          <p> VS </p>
+          <p class="challenger2-name">CHALLENGER 2 NAME</p>
+        </div>
+        <div class="card-main">
+          <div class="card-line"></div>
+          <p class=winner-name>CHALLENGER 1 NAME</p>
+          <p class="card-winner-label">WINNER</p>
+          <div class="card-line"></div>
+        </div>
+        <div class="card-footer">
+          <p><span id="number-of-guesses">1675</span> GUESSES</p>
+          <button class="close-button">X</button>
+        </div>
       </section>
     </article>
     </main>
