@@ -1,6 +1,12 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 * {
-  border: 1px solid red;
-  font-family: 'Open Sans';
+  /* border: 1px solid red; */
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Don't edit */
@@ -47,5 +53,130 @@ article {
 }
 
 header {
+  text-align: center;
+  background-color: #404041;
+  padding: 0 0 15px 0;
+  margin: 0;
+}
 
+h1 {
+  color: #DD1972;
+  margin: 0;
+}
+
+.number-title {
+  font-weight: 700;
+  font-size: 200%;
+  text-shadow: 5px 0 #DD1972;
+  letter-spacing: 2px;
+}
+
+.guesser-title {
+  font-weight: 300;
+  font-size: 200%;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.sub-header-text {
+  color: #D1D2D4;
+  font-size: 21px;
+  margin: 0 10px;
+}
+
+.sub-header-line {
+  border: solid #D1D2D4;
+  border-width: 2px 0 0 0;
+  width: 100px;
+  height: 8px;
+}
+/* Needs MQ for header at 475 */
+
+
+.right-side {
+ background-color: #D1D2D4;
+}
+
+.cards {
+background-color: #FFFFFF;
+margin: 4% 8%;
+text-align: center;
+color: #6E6E6E;
+border: 2px solid #6E6E6E;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.challenger1-name,
+.challenger2-name {
+  font-weight: 700;
+  margin: 4px;
+  text-shadow: 1px 0 #6E6E6E;
+  letter-spacing: .8px;
+}
+
+.card-line {
+  border: 1px solid #D1D2D4;
+  margin: 0 5px;
+}
+
+.winner-name {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  padding: 10px 0 0 0;
+  text-shadow: 1.8px 0 #6E6E6E;
+  letter-spacing: 2px;
+}
+
+.card-winner-label {
+  font-weight: 300;
+  font-size: 26px;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.close-button {
+  background-color: #6E6E6E;
+  border: none;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  color: #D1D2D4;
+  font-size: 22px;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 600;
+}
+
+#number-of-guesses {
+  font-weight: 700;
+  text-shadow: .8px 0 #6E6E6E;
+  letter-spacing: 1px;
+}
+
+.top-card {
+  /* display: none; */
+}
+
+.center-card {
+  /* display: none; */
+}
+
+.bottom-card {
+  /* display: none; */
 }
