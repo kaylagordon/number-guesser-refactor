@@ -5,7 +5,7 @@
 }
 
 * {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -20,6 +20,15 @@ article {
 }
 
 /* KAREN */
+h2 {
+  font-size: 20px;
+  margin-bottom: auto;
+}
+
+.set-range-header {
+  margin-left: 12px;
+}
+
 .left-side {
   background-color: #f7f7f7;
 }
@@ -32,16 +41,78 @@ article {
 }
 
 .range-textbox {
+  width: 130px;
+  height: 25px;
+  margin-right: 30px;
+}
+
+.set-range-paragraph {
+  margin: auto;
   width: 180px;
   height: 35px;
-
-
 }
 
 #update-button {
   width: 100px;
   height: 35px;
   border-radius: 20px;
+
+  margin-top: auto;
+  background-color: #6e6e6e;
+  color: #ffffff;
+}
+
+.player-box {
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+}
+
+.name-and-guess-paragraph {
+  margin: auto;
+}
+
+.challenger-header{
+  margin: auto;
+}
+
+.name-textbox {
+  width: 260px;
+  height: 30px;
+}
+
+.guess-box {
+  padding: 2%;
+}
+
+.guess-textbox {
+  width: 150px;
+  height: 30px;
+  margin: auto;
+}
+
+.player-box-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+#sumbit-guess-button {
+  width: 130px;
+  height: 35px;
+  border-radius: 20px;
+  margin-top: auto;
+  background-color: #6e6e6e;
+  color: #ffffff;
+}
+
+#reset-game-button, #clear-game-button{
+  width: 130px;
+  height: 35px;
+  border-radius: 20px;
+  margin-top: auto;
+  background-color: #d0d2d3;
+  color: #ffffff;
   margin: auto;
   background-color: #6e6e6e;
   color: #ffffff;
