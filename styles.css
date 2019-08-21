@@ -21,7 +21,30 @@ article {
 
 /* KAREN */
 .left-side {
+  background-color: #f7f7f7;
+}
+
+.set-range {
+  display: flex;
+  flex-direction: row;
   padding: 2%;
+  justify-content: space-between;
+}
+
+.range-textbox {
+  width: 180px;
+  height: 35px;
+
+
+}
+
+#update-button {
+  width: 100px;
+  height: 35px;
+  border-radius: 20px;
+  margin: auto;
+  background-color: #6e6e6e;
+  color: #ffffff;
 }
 
 /* KAYLA */
