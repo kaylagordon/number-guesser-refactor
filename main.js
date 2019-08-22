@@ -20,8 +20,32 @@ var submitGuessButton = document.getElementById("submit-guess-button");
 
 submitGuessButton.addEventListener("click", function() {
   if (player1GuessInput.value.match("^[0-9]*$")) {
-    // console.log("YAY")
+    console.log("YAY1")
   } else {
-    // console.log("BOO")
+    console.log("BOO1")
+  }
+});
+
+submitGuessButton.addEventListener("click", function() {
+  if (player2GuessInput.value.match("^[0-9]*$")) {
+    console.log("YAY2")
+  } else {
+    console.log("BOO2")
+  }
+});
+
+submitGuessButton.addEventListener("click", function() {
+  if (player1NameInput.value.match("^[0-9a-zA-Z]+$")) {
+    console.log("WOO1");
+  } else {
+    console.log("NOO1");
+  }
+});
+
+submitGuessButton.addEventListener("click", function() {
+  if (player2NameInput.value.match("^[0-9a-zA-Z]+$")) {
+    console.log("WOO2");
+  } else {
+    console.log("NOO2");
   }
 });
