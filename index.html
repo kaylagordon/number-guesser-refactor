@@ -21,36 +21,38 @@
       <section class="set-range">
         <section>
           <p class="set-range-paragraph">Min Range</p>
-          <input id="min-range-input" class="range-textbox" type="text">
+          <input id="min-range-input" class="range-textbox textbox" type="text">
         </section>
         <section>
           <p class="set-range-paragraph">Max Range</p>
-          <input id="max-range-input" class="range-textbox" type="text">
+          <input id="max-range-input" class="range-textbox textbox" type="text">
         </section>
         <button id="update-button">Update</button>
       </section>
-      <section class="player-box">
-        <section class="player-box-names">
-        <p class="name-paragraph">The Current Range is <span id="min-range">1</span> to <span id="max-range">100</span>.</p>
-        <h2 class="challenger-header">Challenger 1</h2>
-        <p class="name-paragraph">Name</p>
-          <input id="player1-name-textbox" class="name-textbox" type="text">
-        <h2 class="challenger-header">Challenger 2</h2>
-          <p class="name-and-guess-paragraph">Name</p>
-          <input id="player2-name-textbox" class="name-textbox" type="text">
-        </section>
-        <section class="guess-box">
-          <p class="guess-paragraph">Guess</p>
-          <input id="player1-guess-textbox" class="guess-textbox" type="text">
-          <p class="guess2-paragraph">Guess</p>
-          <input id="player2-guess-textbox" class="guess-textbox" type="text"><br>
+      <form>
+        <section class="player-box">
+          <section class="player-box-names">
+          <p class="name-paragraph">The Current Range is <span id="min-range">1</span> to <span id="max-range">100</span>.</p>
+          <h2 class="challenger-header">Challenger 1</h2>
+          <p class="name-paragraph">Name</p>
+            <input id="player1-name-textbox" class="name-textbox  textbox" type="text">
+          <h2 class="challenger-header">Challenger 2</h2>
+            <p class="name-and-guess-paragraph">Name</p>
+            <input id="player2-name-textbox" class="name-textbox  textbox" type="text">
           </section>
+          <section class="guess-box">
+            <p class="guess-paragraph">Guess</p>
+            <input id="player1-guess-textbox" class="guess-textbox  textbox" type="text">
+            <p class="guess2-paragraph">Guess</p>
+            <input id="player2-guess-textbox" class="guess-textbox  textbox" type="text"><br>
+            </section>
           </section>
-        <section class="player-box-buttons">
-          <button id="submit-guess-button">SUBMIT GUESS</button>
-          <button id="reset-game-button">RESET GAME</button>
-          <button id="clear-game-button">CLEAR GAME</button>
-        </section>
+          <section class="player-box-buttons">
+            <button id="submit-guess-button">SUBMIT GUESS</button>
+            <button type="reset" id="reset-game-button">RESET GAME</button>
+            <button id="clear-game-button">CLEAR GAME</button>
+          </section>
+        </form>
       <section class="latest-score">
         <h2 class="latest-score-header">Latest Score</h2>
         <section class="challenger1-guess">
