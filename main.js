@@ -17,3 +17,11 @@ var player2NameInput = document.getElementById("player2-name-textbox");
 var player1GuessInput = document.getElementById("player1-guess-textbox");
 var player2GuessInput = document.getElementById("player2-guess-textbox");
 var submitGuessButton = document.getElementById("submit-guess-button");
+
+submitGuessButton.addEventListener("click", function() {
+  if (player1GuessInput.value.match("^[0-9]*$")) {
+    // console.log("YAY")
+  } else {
+    // console.log("BOO")
+  }
+});
