@@ -173,10 +173,12 @@ h2 {
   font-size: 90px;
   font-weight: bold;
   color: #dd1972;
+  margin: auto;
 }
 
 .challenger-name {
   margin: auto;
+  font-size: 20px;
 }
 
 .current-guess {
