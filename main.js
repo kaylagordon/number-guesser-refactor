@@ -49,3 +49,15 @@ submitGuessButton.addEventListener("click", function() {
     console.log("NOO2");
   }
 });
+
+//Treating selectorAll as an array
+// var textBox = document.querySelectorAll(".textbox");
+// var resetButton = document.getElementById("reset-game-button");
+//
+// function resetTextBoxes() {
+//   for (var i = 0; i < textBox.length; i++) {
+//     console.log("Hello");
+//   }
+// }
+//
+// resetButton.addEventListener("click", resetTextBoxes);
