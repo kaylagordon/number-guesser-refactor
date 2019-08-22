@@ -5,7 +5,6 @@
 }
 
 * {
-  /* border: 1px solid #d0d2d3; */
   border: 1px solid red;
   font-family: 'Open Sans', sans-serif;
 }
@@ -38,8 +37,7 @@ h2 {
   display: flex;
   flex-direction: row;
   padding: 2%;
-  justify-content: space-around;
-  border: 1px solid #d0d2d3;
+  justify-content: space-between;
 }
 
 .range-textbox {
@@ -49,42 +47,6 @@ h2 {
 }
 
 .set-range-paragraph {
-  margin: auto;
-  width: 180px;
-  height: 35px;
-
-#update-button {
-  width: 100px;
-  height: 35px;
-  border-radius: 20px;
-  margin-top: auto;
-  background-color: #6e6e6e;
-  color: #ffffff;
-}
-
-.player-box {
-  padding: 2%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: 1px solid #d0d2d3;
-}
-
-.name-paragraph {
-  margin: auto;
-}
-  
-.guess-paragraph {
-  margin: auto;
-  padding-top: 45px;
-}
-  
-.guess2-paragraph {
-  margin: auto;
-  padding-top: 28px;
-}
-
-.challenger-header {
   margin: auto;
 }
 
@@ -148,46 +110,6 @@ h2 {
   margin-top: auto;
   background-color: #d0d2d3;
   color: #ffffff;
-  margin: auto;
-  background-color: #6e6e6e;
-  color: #ffffff;
-}
-
-.latest-score-header {
- margin: auto;
-}
-
-.challenger1-guess {
-  text-align: center;
-  padding: 0px 70px;
-  display: inline-block;
-  border-right: 1px solid red;
-  height: 230px;
-}
-
-.challenger2-guess {
-  margin: auto;
-  text-align: center;
-  padding: 0px 0px;
-  display: inline-block;
-}
-
-#challenger1-number, #challenger2-number {
-  font-size: 90px;
-  font-weight: bold;
-  color: #dd1972;
-}
-
-.challenger-name {
-  margin: auto;
-}
-
-.current-guess {
-  margin: auto;
-}
-
-.latest-score {
-  border: 1px solid #d0d2d3;
 }
 
 /* KAYLA */
