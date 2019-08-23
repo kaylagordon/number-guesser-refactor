@@ -5,8 +5,7 @@
 }
 
 * {
-  /* border: 1px solid #d0d2d3; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -19,10 +18,12 @@ main {
 article {
   width: 50%;
 }
+
 /* KAREN */
 h2 {
   font-size: 20px;
   margin-bottom: auto;
+  padding: 8px 0 0 0;
 }
 
 .set-range-header {
@@ -76,12 +77,12 @@ h2 {
 
 .guess-paragraph {
   margin: auto;
-  padding-top: 45px;
+  padding-top: 57px;
 }
 
 .guess2-paragraph {
   margin: auto;
-  padding-top: 28px;
+  padding-top: 35px;
 }
 
 .challenger-header {
@@ -116,9 +117,9 @@ h2 {
   height: 30px;
 }
 
-.guess-box {
+/* .guess-box {
   padding: 2%;
-}
+} */
 
 .guess-textbox {
   width: 150px;
@@ -156,22 +157,25 @@ h2 {
 
 .challenger1-guess {
   text-align: center;
-  padding: 0px 70px;
-  display: inline-block;
-  border-right: 1px solid red;
-  height: 230px;
 }
 
 .challenger2-guess {
-  margin: auto;
   text-align: center;
-  padding: 0px 0px;
-  display: inline-block;
+}
+
+.guess-boxes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.guess-box-line {
+  border: 1px solid #d0d2d3;
 }
 
 #challenger1-number, #challenger2-number {
   font-size: 90px;
-  font-weight: bold;
+  font-weight: 700;
+  text-shadow: 2px 0 #dd1972 ;
   color: #dd1972;
   margin: auto;
 }
@@ -188,9 +192,11 @@ h2 {
 .latest-score {
   border: 1px solid #d0d2d3;
 }
+
 /* KAYLA */
 .right-side {
-
+ border: solid #6E6E6E;
+ border-width: 0 0 0 2px;
 }
 
 header {
