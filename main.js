@@ -17,6 +17,16 @@ var player2NameInput = document.getElementById("player2-name-textbox");
 var player1GuessInput = document.getElementById("player1-guess-textbox");
 var player2GuessInput = document.getElementById("player2-guess-textbox");
 var submitGuessButton = document.getElementById("submit-guess-button");
+var challenger1Number = document.getElementById("challenger1-number");
+var challenger2Number = document.getElementById("challenger2-number");
+
+submitGuessButton.addEventListener("click", function() {
+  challenger1Number.innerText = player1GuessInput.value;
+  challenger2Number.innerText = player2GuessInput.value;
+  event.preventDefault();
+});
+
+
 
 submitGuessButton.addEventListener("click", function() {
   if (player1GuessInput.value.match("^[0-9]*$")) {
@@ -49,6 +59,8 @@ submitGuessButton.addEventListener("click", function() {
     console.log("NOO2");
   }
 });
+
+
 
 //Treating selectorAll as an array
 // var textBox = document.querySelectorAll(".textbox");
