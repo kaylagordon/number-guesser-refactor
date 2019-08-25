@@ -60,7 +60,11 @@ submitGuessButton.addEventListener("click", function() {
   }
 });
 
-
+updateButton.addEventListener("click", function() {
+  var min = minRangeInput.value;
+  var max = maxRangeInput.value;
+  var randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
+});
 
 //Treating selectorAll as an array
 // var textBox = document.querySelectorAll(".textbox");
