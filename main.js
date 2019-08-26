@@ -20,101 +20,100 @@ var challenger2Name = document.querySelectorAll(".challenger2-name");
 var resetButton = document.getElementById("reset-game-button");
 var clearButton = document.getElementById("clear-game-button");
 
-updateButton.addEventListener("click", function() {
+updateButton.addEventListener("click", clickUpdateButton);
+
+function changeRangeText() {
   minRangeText.innerText = minRangeInput.value;
   maxRangeText.innerText = maxRangeInput.value;
-});
+};
 
-updateButton.addEventListener("click", function() {
+function getRandomNumber() {
   var min = minRangeInput.value;
   var max = maxRangeInput.value;
   randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
-});
+};
 
-submitGuessButton.addEventListener("click", function() {
+function clickUpdateButton() {
+  changeRangeText();
+  getRandomNumber();
+};
+
+// for phase 2
+// submitGuessButton.addEventListener("click", function() {
+//   if (player1GuessInput.value.match("^[0-9]*$")) {
+//     console.log("YAY1")
+//   } else {
+//     console.log("BOO1")
+//   }
+// });
+//
+// submitGuessButton.addEventListener("click", function() {
+//   if (player2GuessInput.value.match("^[0-9]*$")) {
+//     console.log("YAY2")
+//   } else {
+//     console.log("BOO2")
+//   }
+// });
+//
+// submitGuessButton.addEventListener("click", function() {
+//   if (player1NameInput.value.match("^[0-9a-zA-Z]+$")) {
+//     console.log("WOO1");
+//   } else {
+//     console.log("NOO1");
+//   }
+// });
+//
+// submitGuessButton.addEventListener("click", function() {
+//   if (player2NameInput.value.match("^[0-9a-zA-Z]+$")) {
+//     console.log("WOO2");
+//   } else {
+//     console.log("NOO2");
+//   }
+// });
+
+submitGuessButton.addEventListener("click", clickSubmitButton);
+
+function clickSubmitButton() {
+  changeCurrentGuess();
+  addFeedback(player1GuessInput, challenger1Feedback);
+  addFeedback(player2GuessInput, challenger2Feedback);
+  inputChallengerName(challenger1Name, player1NameInput);
+  inputChallengerName(challenger2Name, player2NameInput);
+  showCard(player1GuessInput, player1NameInput);
+  showCard(player2GuessInput, player2NameInput);
+};
+
+
+function changeCurrentGuess() {
   challenger1Number.innerText = player1GuessInput.value;
   challenger2Number.innerText = player2GuessInput.value;
   event.preventDefault();
-});
+};
 
-submitGuessButton.addEventListener("click", function() {
-  if (player1GuessInput.value.match("^[0-9]*$")) {
-    console.log("YAY1")
-  } else {
-    console.log("BOO1")
+function addFeedback(guessInput, feedback) {
+  if (parseInt(guessInput.value) > randomNumber) {
+    feedback.innerText = "That's too high";
+    } else if (parseInt(guessInput.value) < randomNumber) {
+    feedback.innerText = "That's too low";
+    } else {
+    feedback.innerText = "BOOM!";
   }
-});
+};
 
-submitGuessButton.addEventListener("click", function() {
-  if (player2GuessInput.value.match("^[0-9]*$")) {
-    console.log("YAY2")
-  } else {
-    console.log("BOO2")
+function inputChallengerName(name, nameInput) {
+  for (var i = 0; i < name.length; i++) {
+  name[i].innerText = nameInput.value;
   }
-});
+};
 
-submitGuessButton.addEventListener("click", function() {
-  if (player1NameInput.value.match("^[0-9a-zA-Z]+$")) {
-    console.log("WOO1");
-  } else {
-    console.log("NOO1");
-  }
-});
-
-submitGuessButton.addEventListener("click", function() {
-  if (player2NameInput.value.match("^[0-9a-zA-Z]+$")) {
-    console.log("WOO2");
-  } else {
-    console.log("NOO2");
-  }
-});
-
-submitGuessButton.addEventListener("click", function() {
-  if (parseInt(player1GuessInput.value) > randomNumber) {
-    challenger1Feedback.innerText = "That's too high";
-  } else if (parseInt(player1GuessInput.value) < randomNumber) {
-    challenger1Feedback.innerText = "That's too low";
-  } else {
-    challenger1Feedback.innerText = "BOOM!";
-  }
-});
-
-submitGuessButton.addEventListener("click", function() {
-  if (parseInt(player2GuessInput.value) > randomNumber) {
-    challenger2Feedback.innerText = "That's too high";
-  } else if (parseInt(player2GuessInput.value) < randomNumber) {
-    challenger2Feedback.innerText = "That's too low";
-  } else {
-    challenger2Feedback.innerText = "BOOM!";
-  }
-});
-
-submitGuessButton.addEventListener("click", function() {
-  for (var i = 0; i < challenger1Name.length; i++) {
-    challenger1Name[i].innerText = player1NameInput.value;
-  }
-});
-
-submitGuessButton.addEventListener("click", function() {
-  for (var i = 0; i < challenger2Name.length; i++) {
-    challenger2Name[i].innerText = player2NameInput.value;
-  }
-});
-
-submitGuessButton.addEventListener("click", function()  {
-  if (parseInt(player1GuessInput.value) === randomNumber) {
-    game1Winner.innerText = player1NameInput.value;
+function showCard(guessInput, winnerName) {
+    if (parseInt(guessInput.value) === randomNumber) {
+    game1Winner.innerText = winnerName.value;
     game1Card.classList.add("show-card");
   }
-});
+};
 
-submitGuessButton.addEventListener("click", function()  {
-  if (parseInt(player2GuessInput.value) === randomNumber) {
-    game1Winner.innerText = player2NameInput.value;
-    game1Card.classList.add("show-card");
-  }
-});
-
+// if there's any text in any box we can reset and clear, if all boxes are blank buttons are disabled.
 resetButton.addEventListener("mouseover", function() {
   if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
   resetButton.disabled = false;
