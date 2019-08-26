@@ -41,8 +41,12 @@ h2 {
   flex-direction: row;
   justify-content: flex-start;
   padding: 2% 10px;
-  border: solid #d0d2d3;
-  border-width: 0 1px 1px 1px;
+}
+
+.range-border {
+  border: 1px solid #d0d2d3;
+  background-color: #ffffff;
+  margin: 2% 2%;
 }
 
 .range-textbox {
@@ -75,7 +79,6 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  border: 1px solid #d0d2d3;
 }
 
 .name-paragraph {
@@ -143,6 +146,12 @@ h2 {
   background-color: #d0d2d3;
 }
 
+.player-box-border {
+  border: 1px solid #d0d2d3;
+  margin: 2% 2%;
+  background-color: #ffffff;
+}
+
 .latest-score-header {
  margin: 2% 10px;
 }
@@ -183,6 +192,8 @@ h2 {
 
 .latest-score {
   border: 1px solid #d0d2d3;
+  margin: 2% 2%;
+  background-color: #ffffff;
 }
 
 /* KAYLA */
