@@ -325,8 +325,13 @@ border: 2px solid #6E6E6E;
 }
 
 .game2-card {
-  /* display: none; */
+  display: none;
 }
 
 .game1-card {
-  /* display: none; */
+  display: none;
+}
+
+.show-card {
+  display: block;
+}
