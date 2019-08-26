@@ -108,15 +108,17 @@ clearButton.addEventListener("mouseover", function() {
 }
 });
 
+var challenger1Name = document.querySelectorAll(".challenger1-name");
+var challenger2Name = document.querySelectorAll(".challenger2-name");
 
-//Treating selectorAll as an array
-// var textBox = document.querySelectorAll(".textbox");
-// var resetButton = document.getElementById("reset-game-button");
-//
-// function resetTextBoxes() {
-//   for (var i = 0; i < textBox.length; i++) {
-//     console.log("Hello");
-//   }
-// }
-//
-// resetButton.addEventListener("click", resetTextBoxes);
+submitGuessButton.addEventListener("click", function() {
+  for (var i = 0; i < challenger1Name.length; i++) {
+    challenger1Name[i].innerText = player1NameInput.value;
+  }
+});
+
+submitGuessButton.addEventListener("click", function() {
+  for (var i = 0; i < challenger2Name.length; i++) {
+    challenger2Name[i].innerText = player2NameInput.value;
+  }
+});

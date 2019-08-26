@@ -320,13 +320,13 @@ border: 2px solid #6E6E6E;
   letter-spacing: 1px;
 }
 
-.top-card {
+.game3-card {
+  display: none;
+}
+
+.game2-card {
   /* display: none; */
 }
 
-.center-card {
-  /* display: none; */
-}
-
-.bottom-card {
+.game1-card {
   /* display: none; */
