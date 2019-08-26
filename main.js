@@ -89,6 +89,25 @@ updateButton.addEventListener("click", function() {
   randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
 });
 
+var resetButton = document.getElementById("reset-game-button");
+var clearButton = document.getElementById("clear-game-button");
+
+resetButton.addEventListener("mouseover", function() {
+  if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
+  resetButton.disabled = false;
+} else {
+  resetButton.disabled = true;
+}
+});
+
+clearButton.addEventListener("mouseover", function() {
+  if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
+  clearButton.disabled = false;
+} else {
+  clearButton.disabled = true;
+}
+});
+
 
 //Treating selectorAll as an array
 // var textBox = document.querySelectorAll(".textbox");

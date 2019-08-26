@@ -142,13 +142,17 @@ h2 {
   color: #ffffff;
 }
 
-#reset-game-button, #clear-game-button{
+#reset-game-button, #clear-game-button {
+  background-color: #6e6e6e;
   width: 130px;
   height: 35px;
   border-radius: 20px;
   margin-top: auto;
-  background-color: #d0d2d3;
   color: #ffffff;
+}
+
+#reset-game-button:disabled, #clear-game-button:disabled {
+  background-color: #d0d2d3;
 }
 
 .latest-score-header {
