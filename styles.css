@@ -65,6 +65,11 @@ h2 {
   color: #ffffff;
 }
 
+#min-range, #max-range {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .player-box {
   padding: 2% 10px;
   display: flex;

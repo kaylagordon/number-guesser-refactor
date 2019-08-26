@@ -124,8 +124,8 @@ resetButton.addEventListener("mouseover", function() {
 
 clearButton.addEventListener("mouseover", function() {
   if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
-  clearButton.disabled = false;
-} else {
-  clearButton.disabled = true;
-}
+    clearButton.disabled = false;
+  } else {
+    clearButton.disabled = true;
+  }
 });
