@@ -318,3 +318,64 @@ border: 2px solid #6E6E6E;
 .show-card {
   display: block;
 }
+
+@media screen and (max-width: 350px) {
+
+  .player-box, .guess-boxes, .set-range {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .guess-paragraph, .guess2-paragraph {
+    padding: 0;
+  }
+
+  main {
+    display: block;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+  }
+
+  .player-box-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+
+  #reset-game-button, #clear-game-button, #submit-guess-button {
+    width: 100%;
+    margin: 3px;
+  }
+
+  #update-button {
+    margin: 3px;
+  }
+
+  .textbox {
+    width: 100%;
+    margin: 0;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  h1 {
+    width: 100%;
+  }
+
+  .number-title, .guesser-title {
+    font-size: 100%;
+    text-shadow: none;
+  }
+
+  .sub-header-text {
+    font-size: 50%;
+  }
+
+  .sub-header-line {
+    width: 20%;
+  }
+};
