@@ -122,3 +122,20 @@ submitGuessButton.addEventListener("click", function() {
     challenger2Name[i].innerText = player2NameInput.value;
   }
 });
+
+var game1Card = document.querySelector(".game1-card");
+var game1Winner = document.querySelector(".game1-winner");
+
+submitGuessButton.addEventListener("click", function()  {
+  if (parseInt(player1GuessInput.value) === randomNumber) {
+    game1Winner.innerText = player1NameInput.value;
+    game1Card.classList.add("show-card");
+  }
+});
+
+submitGuessButton.addEventListener("click", function()  {
+  if (parseInt(player2GuessInput.value) === randomNumber) {
+    game1Winner.innerText = player2NameInput.value;
+    game1Card.classList.add("show-card");
+  }
+});
