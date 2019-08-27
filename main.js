@@ -19,6 +19,7 @@ var challenger1Name = document.querySelectorAll(".challenger1-name");
 var challenger2Name = document.querySelectorAll(".challenger2-name");
 var resetButton = document.getElementById("reset-game-button");
 var clearButton = document.getElementById("clear-game-button");
+var rightSideContainer = document.querySelector(".right-side");
 
 updateButton.addEventListener("click", clickUpdateButton);
 
@@ -79,8 +80,8 @@ function clickSubmitButton() {
   addFeedback(player2GuessInput, challenger2Feedback);
   inputChallengerName(challenger1Name, player1NameInput);
   inputChallengerName(challenger2Name, player2NameInput);
-  showCard(player1GuessInput, player1NameInput);
-  showCard(player2GuessInput, player2NameInput);
+  addCard(player1GuessInput, player1NameInput.value);
+  addCard(player2GuessInput, player2NameInput.value);
 };
 
 
@@ -100,20 +101,42 @@ function addFeedback(guessInput, feedback) {
   }
 };
 
+function addCard(guessInput, winner) {
+  var player1 = player1NameInput.value;
+  var player2 = player2NameInput.value
+  if (parseInt(guessInput.value) === randomNumber) {
+    rightSideContainer.innerHTML += `<section class="cards game1-card">
+      <div class="card-header">
+        <p class="challenger1-name">${player1}</p>
+        <p> VS </p>
+        <p class="challenger2-name">${player2}</p>
+      </div>
+      <div class="card-main">
+        <div class="card-line"></div>
+        <p class="winner-name game1-winner">${winner}</p>
+        <p class="card-winner-label">WINNER</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="card-footer">
+        <p><span id="number-of-guesses">1675</span> GUESSES</p>
+        <button class="close-button">X</button>
+      </div>
+    </section>`;
+  }
+};
+
 function inputChallengerName(name, nameInput) {
   for (var i = 0; i < name.length; i++) {
   name[i].innerText = nameInput.value;
   }
 };
 
-function showCard(guessInput, winnerName) {
-    if (parseInt(guessInput.value) === randomNumber) {
-    game1Winner.innerText = winnerName.value;
-    game1Card.classList.add("show-card");
-  }
-};
+function showCard(event) {
+    if (event.target.classList.contains("close-button")) {
+       (event.target.parentNode.remove)
+    }
+}
 
-// if there's any text in any box we can reset and clear, if all boxes are blank buttons are disabled.
 resetButton.addEventListener("mouseover", function() {
   if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
   resetButton.disabled = false;
@@ -124,8 +147,8 @@ resetButton.addEventListener("mouseover", function() {
 
 clearButton.addEventListener("mouseover", function() {
   if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
-    clearButton.disabled = false;
-  } else {
-    clearButton.disabled = true;
-  }
+  clearButton.disabled = false;
+} else {
+  clearButton.disabled = true;
+}
 });
