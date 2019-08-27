@@ -105,7 +105,7 @@ function addCard(guessInput, winner) {
   var player1 = player1NameInput.value;
   var player2 = player2NameInput.value
   if (parseInt(guessInput.value) === randomNumber) {
-    rightSideContainer.innerHTML += `<section class="cards game1-card">
+    rightSideContainer.innerHTML += `<section class="card">
       <div class="card-header">
         <p class="challenger1-name">${player1}</p>
         <p> VS </p>
@@ -131,9 +131,11 @@ function inputChallengerName(name, nameInput) {
   }
 };
 
-function showCard(event) {
+rightSideContainer.addEventListener("click", deleteCard);
+
+function deleteCard(event) {
     if (event.target.classList.contains("close-button")) {
-       (event.target.parentNode.remove)
+       event.target.closest("section").remove();
     }
 }
 
