@@ -139,18 +139,28 @@ function deleteCard(event) {
     }
 }
 
-resetButton.addEventListener("mouseover", function() {
-  if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
-  resetButton.disabled = false;
-} else {
-  resetButton.disabled = true;
-}
+document.addEventListener("DOMContentLoaded", getDefaultRandomNumber);
+
+function getDefaultRandomNumber() {
+  randomNumber = Math.floor(Math.random() * (+100 - +1)) + +1;
+};
+
+clearButton.addEventListener("click", function() {
+  window.location.reload();
 });
 
-clearButton.addEventListener("mouseover", function() {
-  if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
-  clearButton.disabled = false;
-} else {
-  clearButton.disabled = true;
-}
-});
+// resetButton.addEventListener("mouseover", function() {
+//   if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
+//   resetButton.disabled = false;
+// } else {
+//   resetButton.disabled = true;
+// }
+// });
+//
+// clearButton.addEventListener("mouseover", function() {
+//   if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
+//   clearButton.disabled = false;
+// } else {
+//   clearButton.disabled = true;
+// }
+// });
