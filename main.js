@@ -1,9 +1,3 @@
-var challenger1Feedback = document.getElementById("challenger1-feedback");
-var challenger1Name = document.querySelectorAll(".challenger1-name");
-var challenger1Number = document.getElementById("challenger1-number");
-var challenger2Feedback = document.getElementById("challenger2-feedback");
-var challenger2Name = document.querySelectorAll(".challenger2-name");
-var challenger2Number = document.getElementById("challenger2-number");
 var clearButton = document.getElementById("clear-game-button");
 var game1Card = document.querySelector(".game1-card");
 var game1Winner = document.querySelector(".game1-winner");
@@ -18,10 +12,16 @@ var minRangeText = document.getElementById("min-range");
 var name1Error = document.querySelector(".name1-error");
 var name2Error = document.querySelector(".name2-error");
 var playerBox = document.querySelector(".player-box");
+var player1Feedback = document.getElementById("player1-feedback");
 var player1GuessInput = document.getElementById("player1-guess-textbox");
+var player1Name = document.querySelectorAll(".player1-name");
 var player1NameInput = document.getElementById("player1-name-textbox");
+var player1Number = document.getElementById("player1-number");
+var player2Feedback = document.getElementById("player2-feedback");
 var player2GuessInput = document.getElementById("player2-guess-textbox");
+var player2Name = document.querySelectorAll(".player2-name");
 var player2NameInput = document.getElementById("player2-name-textbox");
+var player2Number = document.getElementById("player2-number");
 var randomNumber = null;
 var rightSideContainer = document.querySelector(".right-side");
 var resetButton = document.getElementById("reset-game-button");
@@ -44,9 +44,9 @@ function addCard(guessInput, winner) {
   if (parseInt(guessInput.value) === randomNumber) {
     rightSideContainer.innerHTML += `<section class="card">
       <div class="card-header">
-        <p class="challenger1-name">${player1}</p>
+        <p class="player1-name">${player1}</p>
         <p> VS </p>
-        <p class="challenger2-name">${player2}</p>
+        <p class="player2-name">${player2}</p>
       </div>
       <div class="card-main">
         <div class="card-line"></div>
@@ -78,8 +78,8 @@ function changeRangeText() {
 };
 
 function changeCurrentGuess() {
-  challenger1Number.innerText = player1GuessInput.value;
-  challenger2Number.innerText = player2GuessInput.value;
+  player1Number.innerText = player1GuessInput.value;
+  player2Number.innerText = player2GuessInput.value;
   event.preventDefault();
 };
 
@@ -133,10 +133,10 @@ function clickSubmitButton() {
   guess2Error.style.display = "none";
 
   changeCurrentGuess();
-  addFeedback(player1GuessInput, challenger1Feedback);
-  addFeedback(player2GuessInput, challenger2Feedback);
-  inputChallengerName(challenger1Name, player1NameInput);
-  inputChallengerName(challenger2Name, player2NameInput);
+  addFeedback(player1GuessInput, player1Feedback);
+  addFeedback(player2GuessInput, player2Feedback);
+  inputPlayerName(player1Name, player1NameInput);
+  inputPlayerName(player2Name, player2NameInput);
   addCard(player1GuessInput, player1NameInput.value);
   addCard(player2GuessInput, player2NameInput.value);
 };
@@ -186,7 +186,7 @@ function getRandomNumber() {
   randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
 };
 
-function inputChallengerName(name, nameInput) {
+function inputPlayerName(name, nameInput) {
   for (var i = 0; i < name.length; i++) {
   name[i].innerText = nameInput.value;
   }
