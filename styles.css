@@ -53,12 +53,14 @@ h2 {
 .range-textbox {
   width: 200px;
   height: 40px;
-  margin: 0 30px 0 0;
 }
 
 .set-range-paragraph {
   margin: auto;
-  height: 35px;
+}
+
+#min-range-input {
+  margin-right: 30px;
 }
 
 #update-button {
@@ -131,8 +133,8 @@ h2 {
 }
 
 .player-box-buttons {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   padding: 2%;
 }
 
@@ -145,17 +147,19 @@ h2 {
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
+  margin-right: 34px;
 }
 
 #reset-game-button, #clear-game-button {
   background-color: #6e6e6e;
-  width: 150px;
+  width: 170px;
   height: 40px;
   border-radius: 20px;
-  margin-top: auto;
+  /* margin-top: auto; */
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
+  margin-right: 34px;
 }
 
 #update-button:hover, #reset-game-button:hover, #clear-game-button:hover, #submit-guess-button:hover {
