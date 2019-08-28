@@ -102,7 +102,9 @@ function checkGuessNumber(playerGuessInput) {
 };
 
 function checkMinRange() {
-  if ()
+  if (parseInt(minRangeInput.value) > (parseInt(maxRangeInput.value)) {
+    
+  }
 }
 
 function clickSubmitButton() {
