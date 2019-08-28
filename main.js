@@ -1,139 +1,42 @@
-var minRangeInput = document.getElementById("min-range-input");
-var maxRangeInput = document.getElementById("max-range-input");
-var minRangeText = document.getElementById("min-range");
-var maxRangeText = document.getElementById("max-range");
-var updateButton = document.getElementById("update-button");
 var challenger1Feedback = document.getElementById("challenger1-feedback");
-var challenger2Feedback = document.getElementById("challenger2-feedback");
-var player1NameInput = document.getElementById("player1-name-textbox");
-var player2NameInput = document.getElementById("player2-name-textbox");
-var player1GuessInput = document.getElementById("player1-guess-textbox");
-var player2GuessInput = document.getElementById("player2-guess-textbox");
-var submitGuessButton = document.getElementById("submit-guess-button");
+var challenger1Name = document.querySelectorAll(".challenger1-name");
 var challenger1Number = document.getElementById("challenger1-number");
+var challenger2Feedback = document.getElementById("challenger2-feedback");
+var challenger2Name = document.querySelectorAll(".challenger2-name");
 var challenger2Number = document.getElementById("challenger2-number");
-var randomNumber = null;
+var clearButton = document.getElementById("clear-game-button");
 var game1Card = document.querySelector(".game1-card");
 var game1Winner = document.querySelector(".game1-winner");
-var challenger1Name = document.querySelectorAll(".challenger1-name");
-var challenger2Name = document.querySelectorAll(".challenger2-name");
-var resetButton = document.getElementById("reset-game-button");
-var clearButton = document.getElementById("clear-game-button");
-var rightSideContainer = document.querySelector(".right-side");
-var playerBox = document.querySelector(".player-box");
-var minError = document.querySelector(".min-error");
-var maxError = document.querySelector(".max-error");
-var name1Error = document.querySelector(".name1-error");
-var name2Error = document.querySelector(".name2-error");
 var guess1Error = document.querySelector(".guess1-error");
 var guess2Error =document.querySelector(".guess2-error");
+var maxError = document.querySelector(".max-error");
+var maxRangeInput = document.getElementById("max-range-input");
+var maxRangeText = document.getElementById("max-range");
+var minError = document.querySelector(".min-error");
+var minRangeInput = document.getElementById("min-range-input");
+var minRangeText = document.getElementById("min-range");
+var name1Error = document.querySelector(".name1-error");
+var name2Error = document.querySelector(".name2-error");
+var playerBox = document.querySelector(".player-box");
+var player1GuessInput = document.getElementById("player1-guess-textbox");
+var player1NameInput = document.getElementById("player1-name-textbox");
+var player2GuessInput = document.getElementById("player2-guess-textbox");
+var player2NameInput = document.getElementById("player2-name-textbox");
+var randomNumber = null;
+var rightSideContainer = document.querySelector(".right-side");
+var resetButton = document.getElementById("reset-game-button");
+var submitGuessButton = document.getElementById("submit-guess-button");
+var updateButton = document.getElementById("update-button");
 
+document.addEventListener("DOMContentLoaded", getDefaultRandomNumber);
 
-updateButton.addEventListener("click", clickUpdateButton);
-
-function changeRangeText() {
-  minRangeText.innerText = minRangeInput.value;
-  maxRangeText.innerText = maxRangeInput.value;
-};
-
-function getRandomNumber() {
-  var min = minRangeInput.value;
-  var max = maxRangeInput.value;
-  randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
-};
-
-function clickUpdateButton() {
-  changeRangeText();
-  getRandomNumber();
-};
-
-function checkGuess1Number() {
-  if (player1GuessInput.value.match("^[0-9]*$")) {
-    guess1Error.style.display = "none";
-  } else {
-    guess1Error.style.display = "block";
-  }
-};
-
-// player2GuessInput.addEventListener("change", checkGuess2Number);
-//
-// function checkGuess2Number() {
-//   if (player2GuessInput.value.match("^[0-9]*$")) {
-//
-//   }
-// });
-
-
-// submitGuessButton.addEventListener("click", function() {
-//   if (player1NameInput.value.match("^[0-9a-zA-Z]+$")) {
-//     console.log("WOO1");
-//   } else {
-//     console.log("NOO1");
-//   }
-// });
-//
-// submitGuessButton.addEventListener("click", function() {
-//   if (player2NameInput.value.match("^[0-9a-zA-Z]+$")) {
-//     console.log("WOO2");
-//   } else {
-//     console.log("NOO2");
-//   }
-// });
-
+clearButton.addEventListener("click", function() {
+  window.location.reload();
+});
+rightSideContainer.addEventListener("click", deleteCard);
+rightSideContainer.addEventListener("click", disableAllButtons);
 submitGuessButton.addEventListener("click", clickSubmitButton);
-
-function clickSubmitButton() {
-  event.preventDefault();
-  var isValidGuess1 = checkGuess(player1GuessInput, );
-  var isValidGuess2 = checkGuess(player2GuessInput);
-
-  if (isValidGuess1 === false) {
-    guess1Error.style.display = "block";
-    console.log("guess1");
-    return;
-  }
-
-  guess1Error.style.display = "none";
-
-  if (isValidGuess2 === false) {
-    guess2Error.style.display = "block";
-    console.log("guess2");
-    return;
-  }
-
-  guess2Error.style.display = "none";
-
-    changeCurrentGuess();
-    addFeedback(player1GuessInput, challenger1Feedback);
-    addFeedback(player2GuessInput, challenger2Feedback);
-    inputChallengerName(challenger1Name, player1NameInput);
-    inputChallengerName(challenger2Name, player2NameInput);
-    addCard(player1GuessInput, player1NameInput.value);
-    addCard(player2GuessInput, player2NameInput.value);
-};
-
-function checkGuess(playerGuessInput) {
-  console.log("checkGuess ran")
-  if (playerGuessInput.value > maxRangeInput.value || playerGuessInput.value < minRangeInput.value) {
-    return false;
-  }
-};
-
-function changeCurrentGuess() {
-  challenger1Number.innerText = player1GuessInput.value;
-  challenger2Number.innerText = player2GuessInput.value;
-  event.preventDefault();
-};
-
-function addFeedback(guessInput, feedback) {
-  if (parseInt(guessInput.value) > randomNumber) {
-    feedback.innerText = "That's too high";
-  } else if (parseInt(guessInput.value) < randomNumber) {
-    feedback.innerText = "That's too low";
-  } else {
-    feedback.innerText = "BOOM!";
-  }
-};
+updateButton.addEventListener("click", clickUpdateButton);
 
 function addCard(guessInput, winner) {
   var player1 = player1NameInput.value;
@@ -159,31 +62,82 @@ function addCard(guessInput, winner) {
   }
 };
 
-function inputChallengerName(name, nameInput) {
-  for (var i = 0; i < name.length; i++) {
-  name[i].innerText = nameInput.value;
+function addFeedback(guessInput, feedback) {
+  if (parseInt(guessInput.value) > randomNumber) {
+    feedback.innerText = "That's too high";
+  } else if (parseInt(guessInput.value) < randomNumber) {
+    feedback.innerText = "That's too low";
+  } else {
+    feedback.innerText = "BOOM!";
   }
 };
 
-rightSideContainer.addEventListener("click", deleteCard);
-
-function deleteCard(event) {
-    if (event.target.classList.contains("close-button")) {
-       event.target.closest("section").remove();
-    }
-}
-
-document.addEventListener("DOMContentLoaded", getDefaultRandomNumber);
-
-function getDefaultRandomNumber() {
-  randomNumber = Math.floor(Math.random() * (+100 - +1)) + +1;
+function changeRangeText() {
+  minRangeText.innerText = minRangeInput.value;
+  maxRangeText.innerText = maxRangeInput.value;
 };
 
-clearButton.addEventListener("click", function() {
-  window.location.reload();
-});
+function changeCurrentGuess() {
+  challenger1Number.innerText = player1GuessInput.value;
+  challenger2Number.innerText = player2GuessInput.value;
+  event.preventDefault();
+};
 
-rightSideContainer.addEventListener("click", disableAllButtons);
+function checkGuess(playerGuessInput) {
+  console.log("checkGuess ran")
+  if (parseInt(playerGuessInput.value) > parseInt(maxRangeInput.value) || parseInt(playerGuessInput.value) < parseInt(minRangeInput.value)) {
+    return false;
+  } else {
+    console.log(checkGuess)
+    return true;
+  }
+};
+
+function checkGuessNumber(playerGuessInput) {
+  if (parseInt(playerGuessInput.value)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+function clickSubmitButton() {
+  event.preventDefault();
+  var isValidGuess1 = checkGuess(player1GuessInput);
+  var isValidGuess2 = checkGuess(player2GuessInput);
+  var isGuess1Number = checkGuessNumber(player1GuessInput);
+  var isGuess2Number = checkGuessNumber(player2GuessInput);
+
+  if (isValidGuess1 === false || isGuess1Number === false) {
+    guess1Error.style.display = "block";
+    console.log("guess1");
+    return;
+  }
+
+  guess1Error.style.display = "none";
+
+  if (isValidGuess2 === false || isGuess2Number === false) {
+    guess2Error.style.display = "block";
+    console.log("guess2");
+    return;
+  }
+
+  guess2Error.style.display = "none";
+
+  changeCurrentGuess();
+  addFeedback(player1GuessInput, challenger1Feedback);
+  addFeedback(player2GuessInput, challenger2Feedback);
+  inputChallengerName(challenger1Name, player1NameInput);
+  inputChallengerName(challenger2Name, player2NameInput);
+  addCard(player1GuessInput, player1NameInput.value);
+  addCard(player2GuessInput, player2NameInput.value);
+};
+
+function clickUpdateButton() {
+  changeRangeText();
+  getRandomNumber();
+};
+
 
 function disableAllButtons() {
   disableButton(resetButton);
@@ -195,5 +149,27 @@ function disableButton(button) {
     button.disabled = false;
   } else {
     button.disabled = true;
+  }
+};
+
+function deleteCard(event) {
+    if (event.target.classList.contains("close-button")) {
+       event.target.closest("section").remove();
+    }
+};
+
+function getDefaultRandomNumber() {
+  randomNumber = Math.floor(Math.random() * (+100 - +1)) + +1;
+};
+
+function getRandomNumber() {
+  var min = minRangeInput.value;
+  var max = maxRangeInput.value;
+  randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
+};
+
+function inputChallengerName(name, nameInput) {
+  for (var i = 0; i < name.length; i++) {
+  name[i].innerText = nameInput.value;
   }
 };
