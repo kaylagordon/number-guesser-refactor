@@ -1,6 +1,7 @@
 var clearButton = document.getElementById("clear-game-button");
 var game1Card = document.querySelector(".game1-card");
 var game1Winner = document.querySelector(".game1-winner");
+var guessCount = 0;
 var guess1Error = document.querySelector(".guess1-error");
 var guess2Error =document.querySelector(".guess2-error");
 var maxError = document.querySelector(".max-error");
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", getDefaultRandomNumber);
 clearButton.addEventListener("click", function() {
   window.location.reload();
 });
+
 rightSideContainer.addEventListener("click", deleteCard);
 rightSideContainer.addEventListener("click", disableAllButtons);
 submitGuessButton.addEventListener("click", clickSubmitButton);
@@ -55,7 +57,7 @@ function addCard(guessInput, winner) {
         <div class="card-line"></div>
       </div>
       <div class="card-footer">
-        <p><span id="number-of-guesses">1675</span> GUESSES</p>
+        <p><span id="number-of-guesses">${countGuesses()}</span> GUESSES</p>
         <button class="close-button">X</button>
       </div>
     </section>`;
@@ -109,6 +111,10 @@ function checkMinRange() {
   }
 };
 
+resetButton.addEventListener("click", function() {
+  guessCount = 0;
+});
+
 function clickSubmitButton() {
   event.preventDefault();
   var isValidGuess1 = checkGuess(player1GuessInput);
@@ -139,6 +145,7 @@ function clickSubmitButton() {
   inputPlayerName(player2Name, player2NameInput);
   addCard(player1GuessInput, player1NameInput.value);
   addCard(player2GuessInput, player2NameInput.value);
+  countGuesses();
 };
 
 function clickUpdateButton() {
@@ -156,6 +163,10 @@ function clickUpdateButton() {
   getRandomNumber();
 };
 
+function countGuesses() {
+  guessCount += 2;
+  return guessCount;
+};
 
 function disableAllButtons() {
   disableButton(resetButton);
