@@ -41,33 +41,42 @@
       <form>
         <div class="player-box-border">
         <section class="player-box">
-          <section class="player-box-names">
-          <p class="name-paragraph">The Current Range is <span id="min-range">1</span> to <span id="max-range">100</span>.</p>
-          <h2 class="challenger-header">Challenger 1</h2>
-          <p class="name-paragraph">Name</p>
-            <input id="player1-name-textbox" class="name-textbox  textbox" type="text">
-            <div class="error-message name1-error">
-              <p><img src="error-icon.svg"/> Enter a name.</p>
-          </div>
-          <h2 class="challenger-header">Challenger 2</h2>
-            <p class="name-and-guess-paragraph">Name</p>
-            <input id="player2-name-textbox" class="name-textbox  textbox" type="text">
-            <div class="error-message name2-error">
-              <p><img src="error-icon.svg"/> Enter a name.</p>
-          </div>
-          </section>
-          <section class="guess-box">
-            <p class="guess-paragraph">Guess</p>
-            <input id="player1-guess-textbox" class="guess-textbox  textbox" type="text">
-            <div class="error-message guess1-error">
-              <p><img src="error-icon.svg"/> Enter a valid number.</p>
-          </div>
-            <p class="guess2-paragraph">Guess</p>
-            <input id="player2-guess-textbox" class="guess-textbox  textbox" type="text"><br>
-            <div class="error-message guess2-error">
-              <p><img src="error-icon.svg"/> Enter a valid number.</p>
+          <!-- <section class="player-box-form"> -->
+            <p class="name-paragraph">The Current Range is <span id="min-range">1</span> to <span id="max-range">100</span>.</p>
+            <h2 class="challenger-header">Challenger 1</h2>
+            <div class="player-inputs">
+              <div class="name-box-1">
+                <p class="name-paragraph">Name</p>
+                <input id="player1-name-textbox" class="name-textbox  textbox" type="text">
+                <div class="error-message name1-error">
+                  <p><img src="error-icon.svg"/> Enter a name.</p>
+                </div>
+              </div>
+              <div class="guess-box-1">
+                <p class="guess-paragraph">Guess</p>
+                <input id="player1-guess-textbox" class="guess-textbox  textbox" type="text">
+                <div class="error-message guess1-error">
+                  <p><img src="error-icon.svg"/> Enter a valid number.</p>
+                </div>
+              </div>
             </div>
-            </section>
+            <h2 class="challenger-header">Challenger 2</h2>
+            <div class="player-inputs">
+              <div class="name-box-2">
+                <p class="name-and-guess-paragraph">Name</p>
+                <input id="player2-name-textbox" class="name-textbox  textbox" type="text">
+                <div class="error-message name2-error">
+                  <p><img src="error-icon.svg"/> Enter a name.</p>
+                </div>
+              </div>
+            <div class="guess-box-2">
+              <p class="guess2-paragraph">Guess</p>
+              <input id="player2-guess-textbox" class="guess-textbox  textbox" type="text"><br>
+              <div class="error-message guess2-error">
+                <p><img src="error-icon.svg"/> Enter a valid number.</p>
+              </div>
+             </div>
+          </div>
           </section>
           <section class="player-box-buttons">
             <button id="submit-guess-button">SUBMIT GUESS</button>

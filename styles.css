@@ -7,7 +7,7 @@
 }
 
 * {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -77,22 +77,29 @@ h2 {
 .player-box {
   padding: 2% 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .name-paragraph {
-  margin: auto;
+  margin-left: 0;
 }
 
 .guess-paragraph {
   margin: auto;
-  padding-top: 57px;
+  /* padding-top: 57px; */
+}
+
+.player-inputs {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
 }
 
 .guess2-paragraph {
   margin: auto;
-  padding-top: 35px;
+  /* padding-top: 35px; */
 }
 
 .challenger-header {
@@ -104,7 +111,7 @@ h2 {
 }
 
 .challenger-header{
-  margin: auto;
+  margin-left: 0px;
 }
 
 .name-textbox {
@@ -115,7 +122,7 @@ h2 {
 .guess-textbox {
   width: 150px;
   height: 30px;
-  margin: 0 0 0 10px;
+  margin: 0 auto;
 }
 
 .player-box-buttons {
@@ -169,10 +176,6 @@ h2 {
   text-align: center;
 }
 
-.guess-boxes {
-  display: flex;
-  justify-content: space-around;
-}
 
 .guess-box-line {
   border: 1px solid #d0d2d3;
@@ -224,6 +227,10 @@ h1 {
   font-size: 200%;
   text-shadow: 5px 0 #DD1972;
   letter-spacing: 2px;
+}
+
+.guess-box-1, .guess-box-2 {
+  margin: 0 5px;
 }
 
 .guesser-title {
@@ -366,6 +373,7 @@ border: 2px solid #6E6E6E;
 @media screen and (max-width: 425px) {
 
   .player-box, .guess-boxes, .set-range {
+    display: flex;
     flex-direction: column;
     justify-content: center;
   }
@@ -423,5 +431,16 @@ border: 2px solid #6E6E6E;
 
   .sub-header-line {
     width: 20%;
+  }
+
+  .player-inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .guess-box-1, .guess-box-2 {
+    margin: 5px 0;
   }
 };
