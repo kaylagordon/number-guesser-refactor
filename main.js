@@ -145,10 +145,12 @@ function clickUpdateButton() {
   var isMinVaild = checkMinRange();
   if (isMinVaild === false) {
     minError.style.display = "block";
+    maxError.style.display = "block";
     return;
   }
 
   minError.style.display = "none";
+  maxError.style.display = "none";
 
   changeRangeText();
   getRandomNumber();
