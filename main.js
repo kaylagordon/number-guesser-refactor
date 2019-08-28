@@ -101,6 +101,14 @@ function checkGuessNumber(playerGuessInput) {
   }
 };
 
+function checkMinRange() {
+  if (parseInt(minRangeInput.value) < parseInt(maxRangeInput.value)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 function clickSubmitButton() {
   event.preventDefault();
   var isValidGuess1 = checkGuess(player1GuessInput);
@@ -134,6 +142,16 @@ function clickSubmitButton() {
 };
 
 function clickUpdateButton() {
+  var isMinVaild = checkMinRange();
+  if (isMinVaild === false) {
+    minError.style.display = "block";
+    maxError.style.display = "block";
+    return;
+  }
+
+  minError.style.display = "none";
+  maxError.style.display = "none";
+
   changeRangeText();
   getRandomNumber();
 };
