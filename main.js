@@ -107,7 +107,7 @@ function checkMinRange() {
   } else {
     return false;
   }
-}
+};
 
 function clickSubmitButton() {
   event.preventDefault();
@@ -142,6 +142,11 @@ function clickSubmitButton() {
 };
 
 function clickUpdateButton() {
+  var isMinVaild = checkMinRange();
+  if (isMinVaild === false) {
+    minError.style.display = "block";
+    return;
+  }
   changeRangeText();
   getRandomNumber();
 };
