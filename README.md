@@ -17,7 +17,7 @@ Number Guesser is a game played by two people who are attempting to guess the ra
  ![comp1](https://i.imgur.com/zoWQQwd.jpg)
  ![comp2](https://i.imgur.com/ancNiln.jpg)  
  ### Our Layout  
- ![broswer](https://i.imgur.com/RoyOxWW.png)
- ![mobile](https://i.imgur.com/xzPsMgd.png)
+ ![broswer](https://i.imgur.com/ivkGKkM.png)
+ ![mobile](https://i.imgur.com/0irVm1u.png)
  
  # Enjoy our game!
