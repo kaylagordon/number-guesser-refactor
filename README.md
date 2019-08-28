@@ -8,4 +8,10 @@ Number-guesser is a game played by two people who are attempting to guess the ra
  -Once the clicks update the computer will generate a random number. (Note: If no range is given the computer will generate one on its own.
  -Players will enter their names and guess in the textbox field and click submit.
  -Immediately the computer wil give feedback wether the guess is too high or too low or correct.
+ -If a player guesses the right answer a card will appear and then they can play another game.
+ -To continue playing but restet the textboxs players can click reset.
+ -To start all over players can click clear.
  
+ ### Comp
+ **Comp Browser**
+ ![comp1](numberguessercomp1.jpg)
