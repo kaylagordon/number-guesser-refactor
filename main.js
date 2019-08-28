@@ -147,6 +147,9 @@ function clickUpdateButton() {
     minError.style.display = "block";
     return;
   }
+
+  minError.style.display = "none";
+
   changeRangeText();
   getRandomNumber();
 };
