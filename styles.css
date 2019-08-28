@@ -142,7 +142,7 @@ h2 {
   color: #ffffff;
 }
 
-#reset-game-button:disabled, #clear-game-button:disabled {
+#reset-game-button:disabled, #clear-game-button:disabled, #submit-guess-button:disabled {
   background-color: #d0d2d3;
 }
 
@@ -244,8 +244,16 @@ h1 {
   width: 100px;
   height: 8px;
 }
-/* Needs MQ for header at 475 */
 
+img {
+  width: 15px;
+  margin: 0 5px 0 0;
+}
+
+.error-message {
+  color: #DD1972;
+  display: none;
+}
 
 .right-side {
  background-color: #D1D2D4;

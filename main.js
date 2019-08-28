@@ -20,6 +20,14 @@ var challenger2Name = document.querySelectorAll(".challenger2-name");
 var resetButton = document.getElementById("reset-game-button");
 var clearButton = document.getElementById("clear-game-button");
 var rightSideContainer = document.querySelector(".right-side");
+var playerBox = document.querySelector(".player-box");
+var minError = document.querySelector(".min-error");
+var maxError = document.querySelector(".max-error");
+var name1Error = document.querySelector(".name1-error");
+var name2Error = document.querySelector(".name2-error");
+var guess1Error = document.querySelector(".guess1-error");
+var guess2Error =document.querySelector(".guess2-error");
+
 
 updateButton.addEventListener("click", clickUpdateButton);
 
@@ -39,23 +47,23 @@ function clickUpdateButton() {
   getRandomNumber();
 };
 
-// for phase 2
-// submitGuessButton.addEventListener("click", function() {
-//   if (player1GuessInput.value.match("^[0-9]*$")) {
-//     console.log("YAY1")
-//   } else {
-//     console.log("BOO1")
-//   }
-// });
+function checkGuess1Number() {
+  if (player1GuessInput.value.match("^[0-9]*$")) {
+    guess1Error.style.display = "none";
+  } else {
+    guess1Error.style.display = "block";
+  }
+};
+
+// player2GuessInput.addEventListener("change", checkGuess2Number);
 //
-// submitGuessButton.addEventListener("click", function() {
+// function checkGuess2Number() {
 //   if (player2GuessInput.value.match("^[0-9]*$")) {
-//     console.log("YAY2")
-//   } else {
-//     console.log("BOO2")
+//
 //   }
 // });
-//
+
+
 // submitGuessButton.addEventListener("click", function() {
 //   if (player1NameInput.value.match("^[0-9a-zA-Z]+$")) {
 //     console.log("WOO1");
@@ -75,15 +83,41 @@ function clickUpdateButton() {
 submitGuessButton.addEventListener("click", clickSubmitButton);
 
 function clickSubmitButton() {
-  changeCurrentGuess();
-  addFeedback(player1GuessInput, challenger1Feedback);
-  addFeedback(player2GuessInput, challenger2Feedback);
-  inputChallengerName(challenger1Name, player1NameInput);
-  inputChallengerName(challenger2Name, player2NameInput);
-  addCard(player1GuessInput, player1NameInput.value);
-  addCard(player2GuessInput, player2NameInput.value);
+  event.preventDefault();
+  var isValidGuess1 = checkGuess(player1GuessInput, );
+  var isValidGuess2 = checkGuess(player2GuessInput);
+
+  if (isValidGuess1 === false) {
+    guess1Error.style.display = "block";
+    console.log("guess1");
+    return;
+  }
+
+  guess1Error.style.display = "none";
+
+  if (isValidGuess2 === false) {
+    guess2Error.style.display = "block";
+    console.log("guess2");
+    return;
+  }
+
+  guess2Error.style.display = "none";
+
+    changeCurrentGuess();
+    addFeedback(player1GuessInput, challenger1Feedback);
+    addFeedback(player2GuessInput, challenger2Feedback);
+    inputChallengerName(challenger1Name, player1NameInput);
+    inputChallengerName(challenger2Name, player2NameInput);
+    addCard(player1GuessInput, player1NameInput.value);
+    addCard(player2GuessInput, player2NameInput.value);
 };
 
+function checkGuess(playerGuessInput) {
+  console.log("checkGuess ran")
+  if (playerGuessInput.value > maxRangeInput.value || playerGuessInput.value < minRangeInput.value) {
+    return false;
+  }
+};
 
 function changeCurrentGuess() {
   challenger1Number.innerText = player1GuessInput.value;
@@ -94,9 +128,9 @@ function changeCurrentGuess() {
 function addFeedback(guessInput, feedback) {
   if (parseInt(guessInput.value) > randomNumber) {
     feedback.innerText = "That's too high";
-    } else if (parseInt(guessInput.value) < randomNumber) {
+  } else if (parseInt(guessInput.value) < randomNumber) {
     feedback.innerText = "That's too low";
-    } else {
+  } else {
     feedback.innerText = "BOOM!";
   }
 };
@@ -149,18 +183,17 @@ clearButton.addEventListener("click", function() {
   window.location.reload();
 });
 
-// resetButton.addEventListener("mouseover", function() {
-//   if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
-//   resetButton.disabled = false;
-// } else {
-//   resetButton.disabled = true;
-// }
-// });
-//
-// clearButton.addEventListener("mouseover", function() {
-//   if (player1NameInput.value != "" || player1GuessInput.value != "" || player2NameInput.value != "" || player2GuessInput.value != "") {
-//   clearButton.disabled = false;
-// } else {
-//   clearButton.disabled = true;
-// }
-// });
+rightSideContainer.addEventListener("click", disableAllButtons);
+
+function disableAllButtons() {
+  disableButton(resetButton);
+  disableButton(clearButton);
+};
+
+function disableButton(button) {
+  if (player1NameInput.value.length > 0 || player1GuessInput.value.length > 0 || player2NameInput.value.length > 0 || player2GuessInput.value.length > 0) {
+    button.disabled = false;
+  } else {
+    button.disabled = true;
+  }
+};
