@@ -255,6 +255,10 @@ h2 {
   justify-content: space-around;
 }
 
+.feedback {
+  margin: 0 0 10px 0;
+}
+
 /* ERROR MESSAGES */
 img {
   margin: 0 5px 0 0;
@@ -271,6 +275,7 @@ img {
  background-color: #D1D2D4;
  border: solid #6E6E6E;
  border-width: 0 0 0 2px;
+ padding: 20px;
 }
 
 /* CARDS */
