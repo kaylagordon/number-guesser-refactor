@@ -101,6 +101,10 @@ function checkGuessNumber(playerGuessInput) {
   }
 };
 
+function checkMinRange() {
+  if ()
+}
+
 function clickSubmitButton() {
   event.preventDefault();
   var isValidGuess1 = checkGuess(player1GuessInput);
