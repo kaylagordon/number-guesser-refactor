@@ -7,13 +7,14 @@
 }
 
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-family: 'Open Sans', sans-serif;
 }
 
 /* Don't edit */
 main {
   display: flex;
+  color: #6e6e6e;
 }
 
 /* Don't edit */
@@ -50,9 +51,9 @@ h2 {
 }
 
 .range-textbox {
-  width: 130px;
-  height: 25px;
-  margin: 0 10px 0 0;
+  width: 200px;
+  height: 40px;
+  margin: 0 30px 0 0;
 }
 
 .set-range-paragraph {
@@ -62,11 +63,14 @@ h2 {
 
 #update-button {
   width: 130px;
-  height: 35px;
+  height: 40px;
   border-radius: 20px;
   margin-top: auto;
   background-color: #6e6e6e;
   color: #ffffff;
+  margin-left: 30px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 #min-range, #max-range {
@@ -115,13 +119,14 @@ h2 {
 }
 
 .name-textbox {
-  width: 260px;
-  height: 30px;
+  width: 350px;
+  height: 40px;
+  margin: 0 30px 0 0;
 }
 
 .guess-textbox {
-  width: 150px;
-  height: 30px;
+  width: 200px;
+  height: 40px;
   margin: 0 auto;
 }
 
@@ -132,21 +137,25 @@ h2 {
 }
 
 #submit-guess-button {
-  width: 130px;
-  height: 35px;
+  width: 170px;
+  height: 40px;
   border-radius: 20px;
   margin-top: auto;
   background-color: #6e6e6e;
   color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 #reset-game-button, #clear-game-button {
   background-color: #6e6e6e;
-  width: 130px;
-  height: 35px;
+  width: 150px;
+  height: 40px;
   border-radius: 20px;
   margin-top: auto;
   color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 #update-button:hover, #reset-game-button:hover, #clear-game-button:hover, #submit-guess-button:hover {
