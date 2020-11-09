@@ -10,16 +10,18 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/* HEADER */
 header {
   background-color: #404041;
-  padding: 0 0 15px 0;
-  margin: 0;
   text-align: center;
 }
 
 h1 {
   color: #DD1972;
+  margin: 0;
+}
+
+header {
+  padding: 0 0 15px 0;
   margin: 0;
 }
 
@@ -54,7 +56,6 @@ h1 {
   width: 100px;
 }
 
-/* MAIN */
 main {
   color: #6e6e6e;
   display: flex;
@@ -64,7 +65,6 @@ article {
   width: 50%;
 }
 
-/* LEFT SIDE */
 .left-side {
   background-color: #f7f7f7;
 }
@@ -75,7 +75,6 @@ h2 {
   padding: 8px 0 0 0;
 }
 
- /* SET RANGE BOX */
 .set-range {
   display: flex;
   flex-direction: row;
@@ -110,7 +109,11 @@ h2 {
   margin-right: 10px;
 }
 
-#min-range,
+#min-range {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 #max-range {
   font-weight: 700;
   text-decoration: underline;
@@ -128,7 +131,6 @@ h2 {
   width: 130px;
 }
 
-/* PLAYER BOX */
 .player-header{
   margin-left: 0px;
 }
@@ -184,8 +186,26 @@ h2 {
   margin: 2% 2%;
 }
 
-#submit-guess-button,
-#reset-game-button,
+#submit-guess-button {
+  background-color: #6e6e6e;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  height: 40px;
+  width: 32%;
+}
+
+#reset-game-button {
+  background-color: #6e6e6e;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  height: 40px;
+  width: 32%;
+}
+
 #clear-game-button {
   background-color: #6e6e6e;
   border-radius: 20px;
@@ -196,21 +216,38 @@ h2 {
   width: 32%;
 }
 
-#update-button:hover,
-#reset-game-button:hover,
-#clear-game-button:hover,
+#update-button:hover {
+  background-color: #DD1972;
+  cursor: pointer;
+}
+
+#reset-game-button:hover {
+  background-color: #DD1972;
+  cursor: pointer;
+}
+
+#clear-game-button:hover {
+  background-color: #DD1972;
+  cursor: pointer;
+}
+
 #submit-guess-button:hover {
   background-color: #DD1972;
   cursor: pointer;
 }
 
-#reset-game-button:disabled,
-#clear-game-button:disabled,
+#reset-game-button:disabled {
+  background-color: #d0d2d3;
+}
+
+#clear-game-button:disabled {
+  background-color: #d0d2d3;
+}
+
 #submit-guess-button:disabled {
   background-color: #d0d2d3;
 }
 
-/* LATEST GUESS BOXES */
 .latest-score-header {
  margin: 2% 10px;
 }
@@ -259,7 +296,6 @@ h2 {
   margin: 0 0 10px 0;
 }
 
-/* ERROR MESSAGES */
 img {
   margin: 0 5px 0 0;
   width: 15px;
@@ -270,7 +306,6 @@ img {
   display: none;
 }
 
-/* RIGHT SIDE */
 .right-side {
  background-color: #D1D2D4;
  border: solid #6E6E6E;
@@ -278,7 +313,6 @@ img {
  padding: 20px;
 }
 
-/* CARDS */
 .card {
   background-color: #FFFFFF;
   border: 2px solid #6E6E6E;
@@ -293,8 +327,7 @@ img {
   justify-content: space-between;
 }
 
-.player1-name,
-.player2-name {
+.player1-name, .player2-name {
   font-weight: 700;
   margin: 4px;
   letter-spacing: .8px;
@@ -347,7 +380,6 @@ img {
   text-shadow: .8px 0 #6E6E6E;
 }
 
-/* MEDIA QUERIES */
 @media screen and (max-width: 870px) {
   main {
     display: block;
