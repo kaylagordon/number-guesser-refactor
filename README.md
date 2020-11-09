@@ -14,4 +14,4 @@ Number Guesser is a game played by two people who are attempting to guess the ra
  * To continue playing but reset the textboxs, players can click Reset.
  * To start all over, players can click Clear.
 
-~[gif](https://user-images.githubusercontent.com/51416773/98489837-ddac7f00-21ec-11eb-8198-cf161c3ea7a1.gif)
+![gif](https://user-images.githubusercontent.com/51416773/98489837-ddac7f00-21ec-11eb-8198-cf161c3ea7a1.gif)
