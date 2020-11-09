@@ -5,7 +5,7 @@
 * Fork this Repo
 * Clone down to your machine
 * `cd` into the directory
-* Run `open index.js` to view in browser
+* Run `open index.html` to view in browser
 
 ## Rubrics
 ### HTML
