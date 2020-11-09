@@ -10,7 +10,7 @@
 ## Rubrics
 ### HTML
 #### 4: 
-[ ] Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
+- [ ] Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
 [ ] Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This is checked using Chrome DevTools [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit tool.
 #### 3:
 [ ] Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly
