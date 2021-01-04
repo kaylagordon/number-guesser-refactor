@@ -9,8 +9,10 @@ Notes from this lesson can be found [here](https://docs.google.com/document/d/1N
 * `cd` into the directory
 * Run `open index.html` to view in browser
 
-## Rubrics
-### HTML
+## Grade the project
+In breakout rooms, use the rubrics below to score this project. You will not need to look at the JavaScript file! Focus on the HTML and CSS files only. Be ready to discuss your scores when we come back. 
+
+### HTML Rubric
 #### 4: 
 - [ ] Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
 - [ ] Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This is checked using Chrome DevTools [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit tool.
@@ -21,7 +23,7 @@ Notes from this lesson can be found [here](https://docs.google.com/document/d/1N
 #### 1:
 - [ ] Style and syntax meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).
 
-### CSS
+### CSS Rubric
 #### 4:
 - [ ] CSS is DRY, utilizing classes/rules to cut down on repetitive styles.
 - [ ] Microinteractions such as hover states and animations have been thoughtfully added to improve the user experience.
@@ -36,6 +38,5 @@ Notes from this lesson can be found [here](https://docs.google.com/document/d/1N
 #### 1:
 - [ ] Style and syntax meets the criteria of the [Turing CSS Style Guide](https://github.com/turingschool-examples/css).
 
-## Original Comp:
+### Original Comp:
 ![comp](https://user-images.githubusercontent.com/51416773/98495576-af36a000-21fc-11eb-946d-bf00c6efd940.png)
-
