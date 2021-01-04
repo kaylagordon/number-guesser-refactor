@@ -1,6 +1,8 @@
 # Number Guesser 
 ## HTML & CSS Refactoring Activity
 
+Notes from this lesson can be found [here](https://docs.google.com/document/d/1NK0CY2zeab4SBxgu_U_U1A9KP_a5ZLMAHZ-IJE-2hJI/edit?usp=sharing).
+
 ## Installation Instructions
 * Fork this Repo
 * Clone down to your machine
