@@ -13,15 +13,23 @@ Notes from this lesson can be found [here](https://docs.google.com/document/d/1N
 In breakout rooms, use the rubrics below to score this project. You will not need to look at the JavaScript file! Focus on the HTML and CSS files only. Be ready to discuss your scores when we come back. 
 
 ### HTML Rubric
-#### 4: 
-- [ ] Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
-- [ ] Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This is checked using Chrome DevTools [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit tool.
-#### 3:
-- [ ] Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly
-#### 2:
-- [ ] Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>` or `<span>`. If `<div>` or `<span>` elements are used, they are only for styling purposes.
-#### 1:
-- [ ] Style and syntax meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).
+
+* **4:**
+
+  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
+  - Application fully implements HTML that is accessible for individuals with visual disabilities. 
+
+* **3:**
+
+  - Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly
+
+* **2:**
+
+  - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>` or `<span>`. If `<div>` or `<span` elements are used, they are only for styling purposes.
+
+* **1:**
+
+  - Style and syntax meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).
 
 ### CSS Rubric
 * **4:**
