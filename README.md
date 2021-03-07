@@ -24,19 +24,26 @@ In breakout rooms, use the rubrics below to score this project. You will not nee
 - [ ] Style and syntax meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).
 
 ### CSS Rubric
-#### 4:
-- [ ] CSS is DRY, utilizing classes/rules to cut down on repetitive styles.
-- [ ] Microinteractions such as hover states and animations have been thoughtfully added to improve the user experience.
-- [ ] Design is responsive across small, medium and large breakpoints.
-#### 3:
-- [ ] CSS includes several examples of using a class to apply a styling rule block to multiple elements.
-- [ ] The design of the page is cohesive and ensures an intuitive user experience. Any user could navigate the application without any guidance from the developer.
-#### 2:
-- [ ] Developer makes attempts to write DRY CSS by having at least 1 example of using a class to apply a styling rule block to multiple elements.
-- [ ] There is no use of the `!important` tag. One exception may be for a `.hidden` class.
-- [ ] The design of the page does not match the overall layout provided in the comp.
-#### 1:
-- [ ] Style and syntax meets the criteria of the [Turing CSS Style Guide](https://github.com/turingschool-examples/css).
+* **4:**
+
+  - CSS is DRY, utilizing classes/rules to cut down on repetitive styles.
+  - Microinteractions such as hover states and animations have been thoughtfully added to improve the user experience.
+  - Design is responsive across small, medium and large breakpoints.
+
+* **3:**
+
+  - CSS includes several examples of using a class to apply a styling rule block to multiple elements.
+  - The design of the page is cohesive and ensures an intuitive user experience. Any user could navigate the application without any guidance from the developer.
+
+* **2:**
+
+  - Developer makes attempts to write DRY CSS by having at least 1 example of using a class to apply a styling rule block to multiple elements.
+  - There is no use of the `!important` tag. One exception may be for a `.hidden` class.
+  - The design of the page does not match the overall layout provided in the comp.
+
+* **1:**
+
+  - Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/css).
 
 ### Original Comp:
 ![comp](https://user-images.githubusercontent.com/51416773/98495576-af36a000-21fc-11eb-946d-bf00c6efd940.png)
